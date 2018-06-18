@@ -131,8 +131,109 @@ if (musicians < 0) {
 	console.log('this is a large group');
 }
 
+var  musicians = 7;
+var venue;
+
+if (musicians < 0) {
+	venue = 'small';
+	solved = true;
+} else if (musicians === 1) {
+	venue = 'medium';
+	solved = true;
+} else if (musicians === 2) {
+	venue = 'large';
+	solved = true;
+} else if (musicians === 3) {
+	venue = 'extra large';
+	solved = true;
+} else if (musicians === 4) {
+	venue = 'concert hall';
+	solved = true;
+} else if (musicians > 4) {
+	venue = 'stadium';
+	solved = true; 
+}
+
+if (solved) {
+	console.log('With ' + musicians + ' musicians you will require a ' + venue + '.');
+}
+
+var resturaunt = 'Ian\'s Pizza';
+var bill; 
+var order; 
+var solved; 
+
+if (resturaunt === 'Mcdonalds') {
+	order = 'two double hamburgers';
+	bill = '$4.19';
+	solved = true; 
+} else if (resturaunt === 'Chipotle') {
+	order = 'Chicken Burrito Bowl';
+	bill  = '$7.00';
+	solved = true; 
+} else if (resturaunt === 'Denver Chophouse') {
+	order = 'the ribeye';
+	bill = '$24.00';
+	solved = true;
+} else if (resturaunt === 'Ian\'s Pizza') {
+	order = 'two slices of pepperoni';
+	bill = '$9.00';
+	solved = true; 
+}
+
+if (solved) {
+	console.log('Hi, welcome to ' + resturaunt +'! You have ordered '+ order + '.' +' Your total comes to: '+ bill);
+}
+
+
+var occupation = 'gamer';
+var computer;
+var price;
+var store;
+
+if (occupation === 'video editor') {
+	computer = 'Dell Inspiron Desktop';
+	price = '$350.00';
+	store = 'Best Buy';
+	solved = true;
+} else if (occupation = 'gamer') {
+	computer = 'CyberPower PC';
+	price = '$749.99';
+	store = 'Walmart';
+	solved = true;
+} else if (oppupation = 'CAD Tech') {
+	computer = 'ThinkPad P50';
+	price = '$1.951.00';
+	store = 'Colamco';
+	solved = true;
+}
+
+if (solved) {
+	console.log('Oh, so you\'re a ' + occupation + '? You might like a ' + computer +'.' + ' You can find them at '+ store+' for '+ price+'!');
+}
+
+var colt = 'not busy';
+var weather = 'nice';
+
+if (colt === 'not busy' && weather === 'nice') {
+	console.log('go to the park');
+}
+
+var order = 'alcoholic drinks';
+var age = 21;
+
+if (order === 'alcoholic drinks' && age === 21) {
+	console.log('buy a round!');
+}
+
 */
 
+var temp = 'hot';
+var precip = 'not raining';
+
+if (temp ==='hot' && precip === 'not raining') {
+	console.log('wear a jacket');
+}
 
 </script>
 
