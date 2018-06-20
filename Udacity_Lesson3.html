@@ -288,8 +288,41 @@ switch(city) {
 		console.log('You have selected Milwaukee');
 }
 
-*/
+FALLING THROUGH
 
+var package = "basic";
+var output = "You'll recieve "
+
+switch(package){
+	case "starter":
+		output += "unlimited music,";
+	case "basic":
+		output += "wash lighting for the dance floor,";
+	case "premium":
+		output += "effects lighting for the dance floor and ";
+	default:
+		output += "a guarenteed good time";
+}
+
+console.log(output);
+
+var bodyStyle = "LTD"
+var output = "The car will have ";
+
+switch(bodyStyle){
+	case "SE":
+		output += "an incredible spoiler, ";
+	case "SEL":
+		output += "custom rims, ";
+	case "LTD":
+		output += "lifetime maintenance, ";
+	default:
+		output += "and a great steering wheel!"
+}
+
+console.log(output);
+
+*/
 
 
 </script>
