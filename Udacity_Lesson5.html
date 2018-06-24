@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+
+
+<script>
+/*
+function sayHello() {
+	var message = "Hello!";
+	return message; 
+}
+
+
+function takeAShot() {
+	var message = "He scores!";
+	return message;
+}
+
+
+function getOutside() {
+	var message = "Go for a hike!";
+	return message; 
+}
+
+
+function add(x,y) {
+	var sum = x + y;
+	return sum;
+}
+
+function testing() {
+	return "WHAT AN AWESOME TEST";
+}
+
+console.log(testing());
+
+function story() {
+	return "This is my story, it is such a good story";
+}
+
+console.log(story());
+
+function taleOfTwoCities() {
+	return "It was the best of times, it was the worst of times";
+}
+
+console.log(taleOfTwoCities());
+
+
+function laugh(num) {
+  var ha="";
+  for(i=0; i<num; i++) {
+   ha = ha + "ha" ;
+  }
+  return ha +"!";  
+}
+
+console.log(laugh(3)); 
+
+
+function lol(num) {
+	var ha="";
+	for(i=0; i<num; i++) {
+		ha = ha + "lol";
+	}
+	return ha + "!";
+}
+
+console.log(lol(3));
+
+
+function radical(num) {
+	var swag="";
+	for (i=0; i<num; i++) {
+		swag = swag + "swag";
+	}
+	return swag + "!";
+}
+
+console.log(radical(3));
+
+
+function cars(num) {
+	var vroom = "";
+	for (i=0; i < num; i++) {
+		vroom = vroom + "vroom";
+	}
+	return vroom + "!";
+}
+
+console.log(cars(10));
+
+
+//SCOPE
+
+var james = "I\'m looking for a book"; //this is global scope
+
+function library() {
+	var librarian = "Oh you\'re looking for a book?"; //function scope
+	function classicLiterature() {
+		var book = "Great expectations";
+	}
+}
+
+console.log(james);
+
+
+var sports = "geez I love all sports"; //global scope
+
+function arena() {
+	var rules = "Well these are the rules to raquetball"; //function scope
+	function footFoul() {
+		var foot = "Hey, don\'t touch this line";
+	}
+}
+
+*/
+
+var bookTitle = "Le Petit Prince"; //ok, this is in global scope
+console.log(bookTitle); 
+
+function displayBookEnglish() {
+	bookTitle ="The Little Prince";
+	console.log(bookTitle); //I don't even think this is gonna render because its within a function, but it might be called below?
+}
+
+console.log(bookTitle); //I expect this to read "Le Petit Prince"
+displayBookEnglish(); //by moving this function call around, you change the scope of the subsequent lines! 
+
+
+</script>
+
+
+
+
+</body>
+</html>
