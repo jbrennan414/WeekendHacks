@@ -117,18 +117,93 @@ function arena() {
 	}
 }
 
-*/
+//BOOK TITLE VARIABLE
 
 var bookTitle = "Le Petit Prince"; //ok, this is in global scope
 console.log(bookTitle); 
 
 function displayBookEnglish() {
-	bookTitle ="The Little Prince";
+	var bookTitle ="The Little Prince";
 	console.log(bookTitle); //I don't even think this is gonna render because its within a function, but it might be called below?
 }
 
-console.log(bookTitle); //I expect this to read "Le Petit Prince"
 displayBookEnglish(); //by moving this function call around, you change the scope of the subsequent lines! 
+console.log(bookTitle); //I expect this to read "Le Petit Prince"
+
+
+//DEFINE ADHESIVE VARIABLE TWICE
+
+var adhesive = "glue";
+console.log(adhesive);
+
+function glueToTape() {
+	var adhesive = "tape";
+	console.log(adhesive);
+}
+
+glueToTape();
+console.log(adhesive);
+
+
+//HOISTING PRACTICE
+//FUNCTION DECLARATIONS AND VARIABLE DECLARATIONS ARE 'LIFTED' TO THE TOP OF A CODEBLOCK
+
+sayHi("Julia"); //we call to a function which doesn't exist yet
+
+function sayHi(name) {
+	// this is the location that var greeting is hoisted to, but the value is still below console.log
+	console.log(greeting + " "+ name);
+	var greeting = "Hello";
+}
+
+//FUNCTION EXPRESSIONS
+
+var catSays = function(max) {
+	var catMessage = "";
+	for (var i = 0; i < max; i++) {
+		catMessage += "meow";
+	}
+	return catMessage;
+};
+
+
+var dogSays = function(lindy) {
+	var dogMessage = "";
+	for (var i = 0; i < lindy; i++) {
+		dogMessage += "woof";
+	}
+	return dogMessage;
+}
+
+
+//FUNCTIONS AS PARAMETERS
+//INLINE FUNCTIONS
+
+var favoriteMovie = function displayFavorite(movieName) {
+	console.log("My favorite movie is "+ movieName);
+};
+
+
+var favoriteBand = function displayFavorite(band) {
+	console.log("My favorite band is "+ band);
+};
+
+
+
+var laugh = function(num) {
+	var ha = "";
+	for (i=0; i<=num; i++) {
+		ha = ha + "ha";
+	}
+	return ha + "!"
+
+}
+
+console.log(laugh(40));
+
+
+
+
 
 
 </script>
