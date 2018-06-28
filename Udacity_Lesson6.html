@@ -18,7 +18,7 @@ console.log(cars[2]);
 var random = ["test", false, 0];
 console.log(random[2]);
 
-*/
+
 var coffeeShops = [
 	"Starbucks",
 	"Coffee at the Point",
@@ -69,6 +69,43 @@ coffeeShops.pop();
 sports.pop();
 
 streets.pop();
+
+var donuts = ["glazed","chocolate frosted", "Boston Creme","glazed cruller"];
+donuts.splice(1,1, 'chocolate cruller', 'creme de leche');
+
+console.log(donuts);
+
+var cars = ['Buick', 'Dodge', 'Jeep','Toyota','Honda'];
+cars.splice(1,2,'Pontiac','Volkswagon');
+
+console.log(cars);
+
+var babyNames = ["John", "Dan", "Clare", "Patrick", "Ann"];
+babyNames.splice(0,1,"Lincoln","Dominic");
+
+console.log(babyNames);
+
+
+var cars = ["Buick","Dodge", "Jeep","Toyota","Honda"];
+
+for (var i = 0; i<cars.length; i++) {
+	cars[i] += cars[i].toUpperCase();
+}
+
+console.log(cars);
+
+
+var donut = ["Hole","Bearclaw", "Powdered","Toast","Muffin"];
+
+for (var i = 0; i<donut.length; i++) {
+	donut[i] += donut[i].toUpperCase();
+}
+
+console.log(donut);
+
+
+
+
 
 
 
