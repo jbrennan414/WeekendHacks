@@ -7,6 +7,7 @@
 
 
 <script>
+
 /*
 
 var donuts = ["glazed", "powdered", "jelly"];
@@ -104,11 +105,96 @@ for (var i = 0; i<donut.length; i++) {
 console.log(donut);
 
 
+var cars = ["ford","chevy","camero"];
+
+function printCars(cars) {
+	cars +=" hole";
+	cars = cars.toUpperCase();
+	console.log(cars);
+}
+
+cars.forEach(printCars);
+
+
+var friends = ['Dominic', 'Michael','Lincoln'];
+
+function printFriends(friends) {
+	friends += " friend";
+	friends = friends.toUpperCase();
+	console.log(friends);
+}
+
+friends.forEach(printFriends);
 
 
 
+var boss = ['bill','jeff','mary'];
+
+function printBosses(boss) {
+	boss = boss + " person";
+	boss = boss.toUpperCase();
+	console.log(boss)
+}
+
+boss.forEach(printBosses);
 
 
+var myArray = [1, 2, 3, 4, 5];
+var newArray = myArray.map(function(elem) {
+	elem = elem + 100;
+	return elem;
+})
+
+console.log(newArray);
+
+
+var hundreds = [100, 200, 300, 400, 500];
+var singles = hundreds.map(function(hundreds) {
+	hundreds = hundreds /100;
+	return hundreds
+});
+
+console.log(singles);
+
+
+
+var tens = [10, 20, 30, 40, 50];
+var hundreds = tens.map(function(tens) {
+	tens = tens * 10;
+	return tens;
+});
+
+console.log(hundreds);
+
+
+//Array of Arrays 
+
+var donutBox = [
+	['glazed', 'chocolate glazed', 'cinnamon'],
+	['powdered', 'sprinkled', 'glazed cruller'],
+	['chocolate cruller', 'Boston Creme', 'creme de leche']
+]
+
+for (var row = 0; row < donutBox.length; row= row +1) {
+	for (var column = 0; column <donutBox[row].length; column++) {
+		console.log(donutBox[row][column]);
+	}
+}
+
+
+var vehicles = [
+	['car','horse','buggy'],
+	['plane','train','automobile'],
+	['bike','light rail','walk']
+];
+
+for (var r=0; r<vehicles.length; vehicles++) {
+	for (c =0; c<vehicles[r].length; c++) {
+		console.log(vehicles[r][c]);
+	}
+}
+
+*/
 
 </script>
 
