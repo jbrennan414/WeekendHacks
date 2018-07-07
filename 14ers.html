@@ -8,329 +8,473 @@
 
 <script>
 
-var elbert = {
-	name: 'Mt. Elbert',
-	elevation: 14433,
-	distance: 
-	length:
-	difficulty:
-}
+const fourteeners = [
+	{
+		name: 'Mt. Elbert',
+		elevation: 14433,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
 
-var massive = {
-	name: 'Mt. Massive',
-	elevation: 14421,
-	distance:
-	length:
-	difficulty:
-}
+	{
+		name: 'Mt. Massive',
+		elevation: 14421,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
 
-var harvard = {
-	name: 'Mt. Harvard',
-	elevation: 14420,
-	distance:
-	length:
-	difficulty:
-}
+	{
+		name: 'Mt. Harvard',
+		elevation: 14420,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
 
-var blanca = {
-	name: 'Blanca Peak',
-	elevation: 14345,
-	distance:
-	length:
-	difficulty:
-}
+	{
+		name: 'Blanca Peak',
+		elevation: 14345,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
 
-var laPlata = {
-	name: 'La Plata Peak',
-	elevation: 14336,
-	distance:
-	length:
-	difficulty:
-}
+	{
+		name: 'La Plata Peak',
+		elevation: 14336,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
 
-var uncompahgre = {
-	name: 'Uncompahgre Peak',
-	elevation: 14309,
-	distance:
-	length:
-	difficulty:
-}
+	{
+		name: 'Uncompahgre Peak',
+		elevation: 14309,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
 
-var crestone = {
-	name: 'Crestone Peak',
-	elevation: 14294,
-	distance: 
-	length:
-	difficulty:
-}
+	{
+		name: 'Crestone Peak',
+		elevation: 14294,
+		distance: 5, 
+		length: 5,
+		difficulty: 5
+	},
 
-var lincoln = {
-	name: 'Mt. Lincoln',
-	elevation: 14286,
-	distance:
-	length:
-	difficulty:
-}
+	{
+		name: 'Mt. Lincoln',
+		elevation: 14286,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
 
-var grays = {
-	name: 'Grays Peak',
-	elevation: 14270,
-	distance: 
-	length:
-	difficulty:
-}
+	{
+		name: 'Grays Peak',
+		elevation: 14270,
+		distance: 5, 
+		length: 5,
+		difficulty: 5
+	},
 
-var antero = {
-	name: 'Mt. Antero',
-	elevation: 14269,
-	distance: 
-	length:
-	difficulty:
-}
+	{
+		name: 'Mt. Antero',
+		elevation: 14269,
+		distance: 5, 
+		length: 5,
+		difficulty: 5
+	},
 
-var torreys = {
-	name: 'Torreys Peak',
-	elevation: 14267,
-	distance:
-	length:
-	difficulty:
-}
+	{
+		name: 'Torreys Peak',
+		elevation: 14267,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
 
-var castle = {
-	name: 'Castle Peak',
-	elevation: 14265,
-	distance:
-	length:
-	difficulty:
-}
+	{
+		name: 'Castle Peak',
+		elevation: 14265,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
 
-var quandary = {
-	name: 'Quandary Peak',
-	elevation: 14265,
-	distance:
-	length:
-	difficulty:
-}
+	{
+		name: 'Quandary Peak',
+		elevation: 14265,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
 
-var evans = {
-	name: 'Mt. Evans',
-	elevation: 14264,
-	distance:
-	length:
-	difficulty:
-}
+	{
+		name: 'Mt. Evans',
+		elevation: 14264,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
 
-var longs = {
-	name = 'Longs Peak',
-	elevation: 14255,
-	distance: 
-	length:
-	dificulty:
-}
+	{
+		name: 'Longs Peak',
+		elevation: 14255,
+		distance: 5, 
+		length: 5,
+		dificulty: 5
+	},
 
-var wilson = {
-	name = 'Mt. Wilson',
-	elevation: 14246,
-	distance:
-	length:
-	difficulty:
-}
+	{
+		name: 'Mt. Wilson',
+		elevation: 14246,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
 
-var cameron = {
-	name = 'Mt. Cameron',
-	elevation: 14238, 
-	distance:
-	length:
-	difficulty:
-}
+	{
+		name: 'Mt. Cameron',
+		elevation: 14238, 
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
 
-var shavano = {
-	name: 'Mt. Shavano',
-	elevation: 14229,
-	distance:  
-	length:
-	difficulty:
-}
+	{
+		name: 'Mt. Shavano',
+		elevation: 14229,
+		distance: 5,  
+		length: 5,
+		difficulty: 5
+	},
 
-var belford = {
-	name: 'Mt. Belford',
-	elevation: 14197,
-	distance: 
-	length:
-	difficulty:
-}
+	{
+		name: 'Mt. Belford',
+		elevation: 14197,
+		distance: 5, 
+		length: 5,
+		difficulty: 5
+	},
 
-var crestone = { 
-	name: 'Crestone Needle'
-	elevation: 14197,
-	distance:
-	length:
-	difficulty:
-}
+	{ 
+		name: 'Crestone Needle',
+		elevation: 14197,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
 
-var princeton = { 
-	name: 'Mt. Princeton',
-	elevation: 14197,
-	distance:
-	length:
-	difficulty:
-}
+	{ 
+		name: 'Mt. Princeton',
+		elevation: 14197,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
 
-var yale = { 
-	name: 'Mt. Yale',
-	elevation: 14196,
-	distance:
-	length:
-	difficulty:
-}
+	{ 
+		name: 'Mt. Yale',
+		elevation: 14196,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
 
-var bross = { 
-	name: 'Mt. Bross'
-	elevation: 14172,
-	distance:
-	length:
-	difficulty:
-}
+	{ 
+		name: 'Mt. Bross',
+		elevation: 14172,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
 
-var carson = { 
-	name: 'Kit Carson Peak',
-	elevation: 14165,
-	distance:
-	length:
-	difficulty:
-}
+	{ 
+		name: 'Kit Carson Peak',
+		elevation: 14165,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
 
-var diente = { 
-	name: 'El Diente Peak',
-	elevation: 14159,
-	distance:
-	length:
-	difficulty:
-}
+	{ 
+		name: 'El Diente Peak',
+		elevation: 14159,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
 
-var maroon = {
-	name: 'Maroon Peak',
-	elevation: 14156,
-	distance:
-	length:
-	difficulty:
-}
+	{
+		name: 'Maroon Peak',
+		elevation: 14156,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
 
-var tabeguache = { 
-	name: 'Tabeguache Peak',
-	elevation: 14155,
-	distance:
-	length:
-	difficulty:
-}
+	{ 
+		name: 'Tabeguache Peak',
+		elevation: 14155,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
 
-var oxford = { 
-	name: 'Mt. Oxford',
-	elevation: 14153,
-	distance:
-	length:
-	difficulty:
-}
+	{ 
+		name: 'Mt. Oxford',
+		elevation: 14153,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
 
-var sneffels = { 
-	name: 'Mt. Sneffels',
-	elevation: 14150,
-	distance:
-	length:
-	difficulty:
-}
+	{ 
+		name: 'Mt. Sneffels',
+		elevation: 14150,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
 
-var democrat = { 
-	name: 'Mt. Democrat',
-	elevation: 14148,
-	distance:
-	length:
-	difficulty:
-}
+	{ 
+		name: 'Mt. Democrat',
+		elevation: 14148,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
 
-var capitol = { 
-	name: 'Capitol Peak',
-	elevation: 14130,
-	distance:
-	length:
-	difficulty:
-}
+	{ 
+		name: 'Capitol Peak',
+		elevation: 14130,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
 
-var pikes = { 
-	name: 'Pikes Peak',
-	elevation: 14110,
-	distance:
-	length:
-	difficulty:
-}
+	{ 
+		name: 'Pikes Peak',
+		elevation: 14110,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
 
-var snowmass = { 
-	name: 'Snowmass Mountain',
-	elevation: 14092,
-	distance:
-	length:
-	difficulty:
-}
+	{ 
+		name: 'Snowmass Mountain',
+		elevation: 14092,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
 
-var eolus = { 
-	name: 'Mt. Eolus',
-	elevation: 14083,
-	distance:
-	length:
-	difficulty:
-}
+	{ 
+		name: 'Mt. Eolus',
+		elevation: 14083,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
 
-var windom = { 
-	name: 'Windom Peak',
-	elevation: 14082,
-	distance:
-	length:
-	difficulty:
-}
+	{ 
+		name: 'Windom Peak',
+		elevation: 14082,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
 
-var challenger = { 
-	name: 'Challenger Point',
-	elevation: 14081,
-	distance:
-	length:
-	difficulty:
-}
+	{ 
+		name: 'Challenger Point',
+		elevation: 14081,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
 
-var columbia = { 
-	name: 'Mt. Columbia',
-	elevation: 14073,
-	distance:
-	length:
-	difficulty:
-}
+	{ 
+		name: 'Mt. Columbia',
+		elevation: 14073,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
 
-var missouri = { 
-	name: 'Missouri Mountain',
-	elevation: 14067,
-	distance:
-	length:
-	difficulty:
-}
+	{ 
+		name: 'Missouri Mountain',
+		elevation: 14067,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
 
-var humboldt = { 
-	name: 'Humboldt Peak',
-	elevation: 14064,
-	distance:
-	length:
-	difficulty:
-}
+	{ 
+		name: 'Humboldt Peak',
+		elevation: 14064,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
 
-var bierstadt = { 
-	name: 'Mt. Bierstadt',
-	elevation: 14060,
-	distance:
-	length:
-	difficulty:
-}
+	{ 
+		name: 'Mt. Bierstadt',
+		elevation: 14060,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
 
+	{ 
+		name: 'Conundrum Peak',
+		elevation: 14060,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
 
+	{
+		name: 'Sunlight Peak',
+		elevation: 14059,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
 
+	{ 
+		name: 'Handies Peak',
+		elevation: 14048,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
 
+	{ 
+		name: 'Culebra Peak',
+		elevation: 14047,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
+
+	{ 
+		name: 'Ellingwood Point',
+		elevation: 14042,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
+
+	{ 
+		name: 'Mt. Lindsey',
+		elevation: 14042,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
+
+	{ 
+		name: 'North Eolus',
+		elevation: 14039,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
+
+	{ 
+		name: 'Little Bear Peak',
+		elevation: 14037,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
+
+	{ 
+		name: 'Mt. Sherman',
+		elevation: 14036,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
+
+	{ 
+		name: 'Redcloud Peak',
+		elevation: 14034,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
+
+	{ 
+		name: 'Pyramid Peak',
+		elevation: 14018,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
+
+	{ 
+		name: 'Wilson Peak',
+		elevation: 14017,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
+
+	{ 
+		name: 'Wetterhorn Peak',
+		elevation: 14015,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
+
+	{ 
+		name: 'San Luis Peak',
+		elevation: 14014,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
+
+	{ 
+		name: 'North Maroon Peak',
+		elevation: 14014,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
+
+	{ 
+		name: 'Mount of the Holy Cross',
+		elevation: 14005,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
+
+	{ 
+		name: 'Huron Peak',
+		elevation: 14003,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	},
+
+	{ 
+		name: 'Sunshine Peak',
+		elevation: 14001,
+		distance: 5,
+		length: 5,
+		difficulty: 5
+	}
+];
+
+console.log(fourteeners);
 
 
 </script>
