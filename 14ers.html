@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+<title>Find My Fourteener</title>
+<link rel="stylesheet" href="style.css">
 <head>
 
 </head>
 <body>
+	<div class="header">
+		<h1>Find My Fourteener</h1>
+	</div>
+	<form>
+		<h3>Distance from Denver</h3>
+		<input type= "range" min="1" max="100" value="1" class="slider" id="Distance">
+		<input type= "range" min="1" max="100" value="1" class="slider" id="Hiking Mileage">
+	</form>
 
+	<ul id="showList"></ul>
 
 <script>
 
-const fourteeners = [
+var fourteeners = [
 	{
 		name: 'Mt. Elbert',
 		elevation: 14433,
-		distance: 5,
+		distance: 111,
 		length: 5,
 		difficulty: 5
 	},
@@ -20,7 +31,7 @@ const fourteeners = [
 	{
 		name: 'Mt. Massive',
 		elevation: 14421,
-		distance: 5,
+		distance: 112,
 		length: 5,
 		difficulty: 5
 	},
@@ -28,7 +39,7 @@ const fourteeners = [
 	{
 		name: 'Mt. Harvard',
 		elevation: 14420,
-		distance: 5,
+		distance: 129,
 		length: 5,
 		difficulty: 5
 	},
@@ -36,7 +47,7 @@ const fourteeners = [
 	{
 		name: 'Blanca Peak',
 		elevation: 14345,
-		distance: 5,
+		distance: 210,
 		length: 5,
 		difficulty: 5
 	},
@@ -44,7 +55,7 @@ const fourteeners = [
 	{
 		name: 'La Plata Peak',
 		elevation: 14336,
-		distance: 5,
+		distance: 131,
 		length: 5,
 		difficulty: 5
 	},
@@ -52,7 +63,7 @@ const fourteeners = [
 	{
 		name: 'Uncompahgre Peak',
 		elevation: 14309,
-		distance: 5,
+		distance: 264,
 		length: 5,
 		difficulty: 5
 	},
@@ -60,7 +71,7 @@ const fourteeners = [
 	{
 		name: 'Crestone Peak',
 		elevation: 14294,
-		distance: 5, 
+		distance: 185, 
 		length: 5,
 		difficulty: 5
 	},
@@ -68,7 +79,7 @@ const fourteeners = [
 	{
 		name: 'Mt. Lincoln',
 		elevation: 14286,
-		distance: 5,
+		distance: 100,
 		length: 5,
 		difficulty: 5
 	},
@@ -76,7 +87,7 @@ const fourteeners = [
 	{
 		name: 'Grays Peak',
 		elevation: 14270,
-		distance: 5, 
+		distance: 80, 
 		length: 5,
 		difficulty: 5
 	},
@@ -84,7 +95,7 @@ const fourteeners = [
 	{
 		name: 'Mt. Antero',
 		elevation: 14269,
-		distance: 5, 
+		distance: 138, 
 		length: 5,
 		difficulty: 5
 	},
@@ -92,7 +103,7 @@ const fourteeners = [
 	{
 		name: 'Torreys Peak',
 		elevation: 14267,
-		distance: 5,
+		distance: 54,
 		length: 5,
 		difficulty: 5
 	},
@@ -100,7 +111,7 @@ const fourteeners = [
 	{
 		name: 'Castle Peak',
 		elevation: 14265,
-		distance: 5,
+		distance: 174,
 		length: 5,
 		difficulty: 5
 	},
@@ -108,7 +119,7 @@ const fourteeners = [
 	{
 		name: 'Quandary Peak',
 		elevation: 14265,
-		distance: 5,
+		distance: 88,
 		length: 5,
 		difficulty: 5
 	},
@@ -116,7 +127,7 @@ const fourteeners = [
 	{
 		name: 'Mt. Evans',
 		elevation: 14264,
-		distance: 5,
+		distance: 60,
 		length: 5,
 		difficulty: 5
 	},
@@ -124,7 +135,7 @@ const fourteeners = [
 	{
 		name: 'Longs Peak',
 		elevation: 14255,
-		distance: 5, 
+		distance: 76, 
 		length: 5,
 		dificulty: 5
 	},
@@ -132,7 +143,7 @@ const fourteeners = [
 	{
 		name: 'Mt. Wilson',
 		elevation: 14246,
-		distance: 5,
+		distance: 328,
 		length: 5,
 		difficulty: 5
 	},
@@ -140,7 +151,7 @@ const fourteeners = [
 	{
 		name: 'Mt. Cameron',
 		elevation: 14238, 
-		distance: 5,
+		distance: 99,
 		length: 5,
 		difficulty: 5
 	},
@@ -148,7 +159,7 @@ const fourteeners = [
 	{
 		name: 'Mt. Shavano',
 		elevation: 14229,
-		distance: 5,  
+		distance: 153,  
 		length: 5,
 		difficulty: 5
 	},
@@ -156,7 +167,7 @@ const fourteeners = [
 	{
 		name: 'Mt. Belford',
 		elevation: 14197,
-		distance: 5, 
+		distance: 127, 
 		length: 5,
 		difficulty: 5
 	},
@@ -164,7 +175,7 @@ const fourteeners = [
 	{ 
 		name: 'Crestone Needle',
 		elevation: 14197,
-		distance: 5,
+		distance: 165,
 		length: 5,
 		difficulty: 5
 	},
@@ -172,7 +183,7 @@ const fourteeners = [
 	{ 
 		name: 'Mt. Princeton',
 		elevation: 14197,
-		distance: 5,
+		distance: 134,
 		length: 5,
 		difficulty: 5
 	},
@@ -180,7 +191,7 @@ const fourteeners = [
 	{ 
 		name: 'Mt. Yale',
 		elevation: 14196,
-		distance: 5,
+		distance: 133,
 		length: 5,
 		difficulty: 5
 	},
@@ -188,7 +199,7 @@ const fourteeners = [
 	{ 
 		name: 'Mt. Bross',
 		elevation: 14172,
-		distance: 5,
+		distance: 99,
 		length: 5,
 		difficulty: 5
 	},
@@ -196,7 +207,7 @@ const fourteeners = [
 	{ 
 		name: 'Kit Carson Peak',
 		elevation: 14165,
-		distance: 5,
+		distance: 165,
 		length: 5,
 		difficulty: 5
 	},
@@ -204,7 +215,7 @@ const fourteeners = [
 	{ 
 		name: 'El Diente Peak',
 		elevation: 14159,
-		distance: 5,
+		distance: 328,
 		length: 5,
 		difficulty: 5
 	},
@@ -212,7 +223,7 @@ const fourteeners = [
 	{
 		name: 'Maroon Peak',
 		elevation: 14156,
-		distance: 5,
+		distance: 169,
 		length: 5,
 		difficulty: 5
 	},
@@ -220,7 +231,7 @@ const fourteeners = [
 	{ 
 		name: 'Tabeguache Peak',
 		elevation: 14155,
-		distance: 5,
+		distance: 154,
 		length: 5,
 		difficulty: 5
 	},
@@ -228,7 +239,7 @@ const fourteeners = [
 	{ 
 		name: 'Mt. Oxford',
 		elevation: 14153,
-		distance: 5,
+		distance: 125,
 		length: 5,
 		difficulty: 5
 	},
@@ -236,7 +247,7 @@ const fourteeners = [
 	{ 
 		name: 'Mt. Sneffels',
 		elevation: 14150,
-		distance: 5,
+		distance: 310,
 		length: 5,
 		difficulty: 5
 	},
@@ -244,7 +255,7 @@ const fourteeners = [
 	{ 
 		name: 'Mt. Democrat',
 		elevation: 14148,
-		distance: 5,
+		distance: 96,
 		length: 5,
 		difficulty: 5
 	},
@@ -252,7 +263,7 @@ const fourteeners = [
 	{ 
 		name: 'Capitol Peak',
 		elevation: 14130,
-		distance: 5,
+		distance: 197,
 		length: 5,
 		difficulty: 5
 	},
@@ -260,7 +271,7 @@ const fourteeners = [
 	{ 
 		name: 'Pikes Peak',
 		elevation: 14110,
-		distance: 5,
+		distance: 100,
 		length: 5,
 		difficulty: 5
 	},
@@ -268,7 +279,7 @@ const fourteeners = [
 	{ 
 		name: 'Snowmass Mountain',
 		elevation: 14092,
-		distance: 5,
+		distance: 205,
 		length: 5,
 		difficulty: 5
 	},
@@ -276,7 +287,7 @@ const fourteeners = [
 	{ 
 		name: 'Mt. Eolus',
 		elevation: 14083,
-		distance: 5,
+		distance: 340,
 		length: 5,
 		difficulty: 5
 	},
@@ -284,7 +295,7 @@ const fourteeners = [
 	{ 
 		name: 'Windom Peak',
 		elevation: 14082,
-		distance: 5,
+		distance: 340,
 		length: 5,
 		difficulty: 5
 	},
@@ -292,7 +303,7 @@ const fourteeners = [
 	{ 
 		name: 'Challenger Point',
 		elevation: 14081,
-		distance: 5,
+		distance: 189,
 		length: 5,
 		difficulty: 5
 	},
@@ -300,7 +311,7 @@ const fourteeners = [
 	{ 
 		name: 'Mt. Columbia',
 		elevation: 14073,
-		distance: 5,
+		distance: 124,
 		length: 5,
 		difficulty: 5
 	},
@@ -308,7 +319,7 @@ const fourteeners = [
 	{ 
 		name: 'Missouri Mountain',
 		elevation: 14067,
-		distance: 5,
+		distance: 131,
 		length: 5,
 		difficulty: 5
 	},
@@ -316,7 +327,7 @@ const fourteeners = [
 	{ 
 		name: 'Humboldt Peak',
 		elevation: 14064,
-		distance: 5,
+		distance: 162,
 		length: 5,
 		difficulty: 5
 	},
@@ -324,7 +335,7 @@ const fourteeners = [
 	{ 
 		name: 'Mt. Bierstadt',
 		elevation: 14060,
-		distance: 5,
+		distance: 56,
 		length: 5,
 		difficulty: 5
 	},
@@ -332,7 +343,7 @@ const fourteeners = [
 	{ 
 		name: 'Conundrum Peak',
 		elevation: 14060,
-		distance: 5,
+		distance: 174,
 		length: 5,
 		difficulty: 5
 	},
@@ -340,7 +351,7 @@ const fourteeners = [
 	{
 		name: 'Sunlight Peak',
 		elevation: 14059,
-		distance: 5,
+		distance: 324,
 		length: 5,
 		difficulty: 5
 	},
@@ -474,7 +485,8 @@ const fourteeners = [
 	}
 ];
 
-console.log(fourteeners);
+
+document.getElementById('showList').innerHTML = JSON.stringify(fourteeners, 4)
 
 
 </script>
