@@ -12,10 +12,14 @@
 	<form>
 		<h3>Distance from Denver</h3>
 		<input type= "range" min="1" max="100" value="1" class="slider" id="Distance">
+		<br>
+		<h3>Hike Distance</h3>
 		<input type= "range" min="1" max="100" value="1" class="slider" id="Hiking Mileage">
 	</form>
 
-	<ul id="showList"></ul>
+	<ul>
+		<li id="showList"></li>
+	</ul>
 
 <script>
 
@@ -486,7 +490,16 @@ var fourteeners = [
 ];
 
 
-document.getElementById('showList').innerHTML = JSON.stringify(fourteeners)
+function getFullName(item,index) {
+    var fullname = [item.name, item.name].join(" ");
+    return fullname;
+}
+
+function myFunction() {
+    document.getElementById("showList").innerHTML = fourteeners.map(getFullName);
+}
+
+myFunction();
 
 
 </script>
