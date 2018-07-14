@@ -7,19 +7,25 @@
 </head>
 <body>
 	<div class="header">
+		<img src = "./assets/images/mountains.jpeg" alt="mountains">
 		<h1>Find My Fourteener</h1>
 	</div>
 	<form>
 		<h3>Distance from Denver</h3>
-		<input type= "range" min="1" max="100" value="1" class="slider" id="Distance">
+		<input type= "range" min="1" max="100" value="1" class="slider" id="distanceThreshold">
 		<br>
 		<h3>Hike Distance</h3>
-		<input type= "range" min="1" max="100" value="1" class="slider" id="Hiking Mileage">
+		<input type= "range" min="1" max="100" value="1" class="slider" id="trailThreshold">
+		<br>
+		<br>
+		<button>Submit</button>
 	</form>
 
 	<ul>
-		<li id="showList"></li>
+		<li id="listNames"></li>
 	</ul>
+
+
 
 <script>
 
@@ -28,7 +34,7 @@ var fourteeners = [
 		name: 'Mt. Elbert',
 		elevation: 14433,
 		distance: 111,
-		length: 5,
+		length: 9.5,
 		difficulty: 5
 	},
 
@@ -36,15 +42,15 @@ var fourteeners = [
 		name: 'Mt. Massive',
 		elevation: 14421,
 		distance: 112,
-		length: 5,
-		difficulty: 5
+		length: 14.5,
+		difficulty: 2
 	},
 
 	{
 		name: 'Mt. Harvard',
 		elevation: 14420,
 		distance: 129,
-		length: 5,
+		length: 14,
 		difficulty: 5
 	},
 
@@ -52,7 +58,7 @@ var fourteeners = [
 		name: 'Blanca Peak',
 		elevation: 14345,
 		distance: 210,
-		length: 5,
+		length: 19.2,
 		difficulty: 5
 	},
 
@@ -336,7 +342,7 @@ var fourteeners = [
 		difficulty: 5
 	},
 
-	{ 
+	{
 		name: 'Mt. Bierstadt',
 		elevation: 14060,
 		distance: 56,
@@ -363,7 +369,7 @@ var fourteeners = [
 	{ 
 		name: 'Handies Peak',
 		elevation: 14048,
-		distance: 5,
+		distance: 281,
 		length: 5,
 		difficulty: 5
 	},
@@ -371,7 +377,7 @@ var fourteeners = [
 	{ 
 		name: 'Culebra Peak',
 		elevation: 14047,
-		distance: 5,
+		distance: 243,
 		length: 5,
 		difficulty: 5
 	},
@@ -379,7 +385,7 @@ var fourteeners = [
 	{ 
 		name: 'Ellingwood Point',
 		elevation: 14042,
-		distance: 5,
+		distance: 177,
 		length: 5,
 		difficulty: 5
 	},
@@ -387,15 +393,7 @@ var fourteeners = [
 	{ 
 		name: 'Mt. Lindsey',
 		elevation: 14042,
-		distance: 5,
-		length: 5,
-		difficulty: 5
-	},
-
-	{ 
-		name: 'North Eolus',
-		elevation: 14039,
-		distance: 5,
+		distance: 210,
 		length: 5,
 		difficulty: 5
 	},
@@ -403,7 +401,7 @@ var fourteeners = [
 	{ 
 		name: 'Little Bear Peak',
 		elevation: 14037,
-		distance: 5,
+		distance: 227,
 		length: 5,
 		difficulty: 5
 	},
@@ -411,7 +409,7 @@ var fourteeners = [
 	{ 
 		name: 'Mt. Sherman',
 		elevation: 14036,
-		distance: 5,
+		distance: 108,
 		length: 5,
 		difficulty: 5
 	},
@@ -419,7 +417,7 @@ var fourteeners = [
 	{ 
 		name: 'Redcloud Peak',
 		elevation: 14034,
-		distance: 5,
+		distance: 273,
 		length: 5,
 		difficulty: 5
 	},
@@ -427,7 +425,7 @@ var fourteeners = [
 	{ 
 		name: 'Pyramid Peak',
 		elevation: 14018,
-		distance: 5,
+		distance: 169,
 		length: 5,
 		difficulty: 5
 	},
@@ -435,7 +433,7 @@ var fourteeners = [
 	{ 
 		name: 'Wilson Peak',
 		elevation: 14017,
-		distance: 5,
+		distance: 328,
 		length: 5,
 		difficulty: 5
 	},
@@ -443,7 +441,7 @@ var fourteeners = [
 	{ 
 		name: 'Wetterhorn Peak',
 		elevation: 14015,
-		distance: 5,
+		distance: 308,
 		length: 5,
 		difficulty: 5
 	},
@@ -451,7 +449,7 @@ var fourteeners = [
 	{ 
 		name: 'San Luis Peak',
 		elevation: 14014,
-		distance: 5,
+		distance: 242,
 		length: 5,
 		difficulty: 5
 	},
@@ -459,7 +457,7 @@ var fourteeners = [
 	{ 
 		name: 'North Maroon Peak',
 		elevation: 14014,
-		distance: 5,
+		distance: 225,
 		length: 5,
 		difficulty: 5
 	},
@@ -467,7 +465,7 @@ var fourteeners = [
 	{ 
 		name: 'Mount of the Holy Cross',
 		elevation: 14005,
-		distance: 5,
+		distance: 110,
 		length: 5,
 		difficulty: 5
 	},
@@ -475,7 +473,7 @@ var fourteeners = [
 	{ 
 		name: 'Huron Peak',
 		elevation: 14003,
-		distance: 5,
+		distance: 149,
 		length: 5,
 		difficulty: 5
 	},
@@ -483,23 +481,33 @@ var fourteeners = [
 	{ 
 		name: 'Sunshine Peak',
 		elevation: 14001,
-		distance: 5,
+		distance: 272,
 		length: 5,
 		difficulty: 5
 	}
 ];
 
-
-function getFullName(item,index) {
-    var fullname = [item.name, item.name].join(" ");
-    return fullname;
+/*
+function mtnData(item,index) {
+    var fullname = [item.name].join(" ");
+    return fullname
 }
 
 function myFunction() {
-    document.getElementById("showList").innerHTML = fourteeners.map(getFullName);
+    document.getElementById("showList").innerHTML = fourteeners.map(mtnData);
 }
+ 
 
 myFunction();
+*/ 
+
+const names = fourteeners.map(fourteener => `${fourteener.name}`)
+
+document.getElementById("listNames").innerHTML = names;
+
+
+
+	
 
 
 </script>
