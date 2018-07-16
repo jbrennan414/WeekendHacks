@@ -60,3 +60,9 @@ form {
     width: 200px;
     display: inline-block;
 }
+
+li {
+    border: 1px solid black;
+    width: 200px;
+    height: 150px;
+}

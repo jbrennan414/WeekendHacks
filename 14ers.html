@@ -12,7 +12,7 @@
 	</div>
 	<form>
 		<h3>Distance from Denver</h3>
-		<input type= "range" min="1" max="100" value="1" class="slider" id="distanceThreshold">
+		<input type= "range" min="1" max="340" value="1" class="slider" id="distanceThreshold">
 		<br>
 		<h3>Hike Distance</h3>
 		<input type= "range" min="1" max="100" value="1" class="slider" id="trailThreshold">
@@ -22,14 +22,14 @@
 	</form>
 
 	<ul>
-		<li id="listNames"></li>
+		<li id="demo"></li>
 	</ul>
 
 
 
 <script>
 
-var fourteeners = [
+const fourteeners = [
 	{
 		name: 'Mt. Elbert',
 		elevation: 14433,
@@ -487,27 +487,26 @@ var fourteeners = [
 	}
 ];
 
-/*
-function mtnData(item,index) {
-    var fullname = [item.name].join(" ");
-    return fullname
-}
+
+
+
+
+//document.getElementById("showList").innerHTML = '<ul><li>' + swag.join("</li><li>"); + '</li></ul>';
+
+function mtnName(item,index) {
+	var name = [item.name];
+	var elevation = [item.elevation];
+	var distance = [item.distance];
+	var length = [item.length];
+	var difficulty = [item.difficulty];
+	return '<li>' + name + '<br>' + 'Elevation: '+ elevation + '<br>' + 'Distance from Denver: ' + distance + '<br>'+'Length: '+length+'<br>'+'Difficulty: ' + difficulty + '</li>'
+}	
 
 function myFunction() {
-    document.getElementById("showList").innerHTML = fourteeners.map(mtnData);
+	document.getElementById("demo").innerHTML = fourteeners.map(mtnName);
 }
- 
 
 myFunction();
-*/ 
-
-const names = fourteeners.map(fourteener => `${fourteener.name}`)
-
-document.getElementById("listNames").innerHTML = names;
-
-
-
-	
 
 
 </script>
