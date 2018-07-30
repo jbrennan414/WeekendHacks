@@ -33,41 +33,14 @@ form {
     justify-content: center;
 }
 
-
-.red {
-    border: 5px solid red;
-    height: 300px;
-    width: 200px;
-    display: inline-block;
-}
-
-.blue {
-    border: 5px solid blue;
-    height: 300px;
-    width: 200px;
-    display: inline-block;
-}
-
-.black {
-    border: 5px solid black;
-    height: 300px;
-    width: 200px;
-    display: inline-block;
-}
-
-.yellow {
-    border: 5px solid yellow;
-    height: 300px;
-    width: 200px;
-    display: inline-block;
-}
-
 li {
     border: 1px solid black;
     width: 200px;
     height: 150px;
+    list-style-type: none;
 }
 
 .body {
     padding: 20px;
 }
+
