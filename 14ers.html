@@ -19,7 +19,7 @@
 			<input type= "range" min="1" max="100" value="1" class="slider" id="trailThreshold">
 			<br>
 			<br>
-			<button>Submit</button>
+			<button onClick="showList()">Submit</button>
 		</form>
 
 		<ul>
@@ -490,11 +490,6 @@ const fourteeners = [
 
 
 
-
-//document.getElementById("showList").innerHTML = '<ul><li>' + swag.join("</li><li>"); + '</li></ul>';
-
-const ranges = document.querySelectorAll('.slider');
-
 function mtnName(item,index) {
 	var name = [item.name];
 	var elevation = [item.elevation];
@@ -504,21 +499,23 @@ function mtnName(item,index) {
 	return '<li>' + name + '<br>' + 'Elevation: '+ elevation + '<br>' + 'Distance from Denver: ' + distance + '<br>'+'Length: '+length+'<br>'+'Difficulty: ' + difficulty + '</li>'
 }	
 
-
-const fifteen = fourteeners.filter(inventor =>(fourteeners.distance >= distanceThreshold));
-
-
-function handleRangeUpdate() {
-	console.log(this.value);
+function showList() {
+	document.getElementById("card").innerHTML = fourteeners.map(mtnName);
 }
 
-ranges.forEach(range => range.addEventListener('change', handleRangeUpdate));
+
+
+function sliderAge(distance) {
+	return distance >= document.getElementById("distanceThreshold").value;
+}
 
 function myFunction() {
-	document.getElementById("card").innerHTML = fifteen.map(mtnName);
+    document.getElementById("demo").innerHTML = ages.filter(sliderAge);
 }
+*/
 
-myFunction();
+
+
 
 </script>
 
