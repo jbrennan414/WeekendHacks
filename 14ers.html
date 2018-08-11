@@ -19,7 +19,7 @@
 			<input type= "range" min="1" max="100" value="1" class="slider" id="trailThreshold">
 			<br>
 			<br>
-			<button onClick="showList()">Submit</button>
+			<button onClick="runIt()">Submit</button>
 		</form>
 
 		<ul>
@@ -503,19 +503,24 @@ function showList() {
 	document.getElementById("card").innerHTML = fourteeners.map(mtnName);
 }
 
+//showList()
 
+const fifteen = fourteeners.filter(fourteener => (fourteener.elevation >= 14200));
 
-function sliderAge(distance) {
-	return distance >= document.getElementById("distanceThreshold").value;
+/*
+function shortHikes() {
+	document.getElementById("card".innerHTML = fourteeners.map(mtnName);
 }
 
-function myFunction() {
-    document.getElementById("demo").innerHTML = ages.filter(sliderAge);
-}
+shortHikes();
 */
+console.log(fifteen);
 
+function testing() {
+	document.getElementById("card").innerHTML = fifteen.map(mtnName)
+}
 
-
+testing();
 
 </script>
 
